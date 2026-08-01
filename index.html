@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HVAC C-20 中英双语刷题系统">
+  <title>HVAC Study App 1.5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">HVAC C-20 · V1.5</p>
+      <h1>中英双语刷题系统</h1>
+      <p>法律题库按 Topic 和小节学习，每节不超过 50 题。</p>
+    </header>
+
+    <section class="panel selection-panel" aria-labelledby="selection-title">
+      <h2 id="selection-title">选择练习内容</h2>
+
+      <label for="db-select">题库</label>
+      <select id="db-select">
+        <option value="law">法律题库（1,408题）</option>
+        <option value="skill">技能题库（原V1.4）</option>
+      </select>
+
+      <div id="topic-field">
+        <label for="topic-select">Topic / 主题</label>
+        <select id="topic-select"><option>加载中…</option></select>
+      </div>
+
+      <div id="unit-field">
+        <label id="unit-label" for="unit-select">小节</label>
+        <select id="unit-select"><option>加载中…</option></select>
+      </div>
+
+      <div class="button-row">
+        <button id="start-btn" class="primary-button" type="button">开始答题</button>
+        <button id="review-btn" class="secondary-button" type="button">复习错题</button>
+      </div>
+      <p id="status-message" class="status-message" role="status"></p>
+    </section>
+
+    <section class="panel" aria-labelledby="progress-title">
+      <div class="section-heading">
+        <h2 id="progress-title">学习进度</h2>
+        <button id="clear-progress-btn" class="text-button" type="button">清除进度</button>
+      </div>
+      <div id="progress-list" class="progress-grid"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

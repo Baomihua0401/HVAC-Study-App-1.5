@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>答题 · HVAC Study App 1.5</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell quiz-shell">
+    <header class="quiz-header">
+      <div>
+        <p class="eyebrow">HVAC C-20 · V1.5</p>
+        <h1 id="session-title">章节答题</h1>
+      </div>
+      <button id="language-switch" class="secondary-button" type="button">Switch to English</button>
+    </header>
+
+    <section class="quiz-metrics" aria-label="答题状态">
+      <div><span>进度</span><strong id="progress">1 / 1</strong></div>
+      <div><span>正确率</span><strong id="accuracy">0%</strong></div>
+    </section>
+
+    <section class="panel question-panel">
+      <p id="question-number" class="question-number"></p>
+      <h2 id="question-text">加载中…</h2>
+      <div id="options" class="options"></div>
+      <div id="explanation" class="explanation hidden" aria-live="polite"></div>
+    </section>
+
+    <div class="button-row quiz-actions">
+      <button id="back-btn" class="secondary-button" type="button">返回章节选择</button>
+      <button id="next-btn" class="primary-button hidden" type="button">下一题</button>
+    </div>
+  </main>
+  <script src="quiz.js"></script>
+</body>
+</html>
